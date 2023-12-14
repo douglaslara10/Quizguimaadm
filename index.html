@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Quiz</title>
+</head>
+<body>
+  <div id="admin-container">
+    <label for="admin-password">Digite a senha de administrador:</label>
+    <input type="password" id="admin-password" />
+    <button onclick="adminLogin()">Login de Administrador</button>
+    <button onclick="startQuizForAll()" disabled>Iniciar Quiz para Todos</button>
+  </div>
+
+  <div id="login-container" style="display: none;">
+    <label for="username">Digite seu nome de usuário:</label>
+    <input type="text" id="username" />
+    <button onclick="userLogin()">Login de Usuário</button>
+  </div>
+
+  <div id="quiz-container" style="display: none;">
+    <h1>Quiz</h1>
+    <div id="question-container">
+      <p id="question">Qual é a capital do Brasil?</p>
+    </div>
+    <div id="answer-buttons" class="btn-container">
+    </div>
+    <button id="next-button" class="btn" onclick="nextQuestion()" disabled>Próxima Pergunta</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
